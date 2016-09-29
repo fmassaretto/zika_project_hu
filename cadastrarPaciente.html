@@ -1,14 +1,8 @@
-<?php
-  include('header.php');
-?>
-
-    <script type='text/javascript' src='js/cep.js'></script>
-
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-7 nav navbar-left">
-            <form action="infoPaciente.php" method="POST">
+            <form action="infoPaciente.php">
               <label>Numero Caso:</label><input type="text" name="nrCaso" id="nrCaso" class="form-control"/></br>
               <label>Nome Paciente:</label><input type="text" name="nomePaciente" id="nomePaciente" class="form-control"/></br>
               <label>CPF:</label><input type="text" name="cpf" id="cpf" class="form-control"/></br>
@@ -33,9 +27,7 @@
 
         </div>
 
-        <div class="col-sm-1"></div>
-
-        <div class="col-md-7 nav navbar-left">
+        <div class="col-md-7 col-offset-1 nav navbar-left">
             <label>Data de Entrada no Projeto:</label><input type="date" name="dtEntradaProjeto" id="dtEntradaProjeto" class="form-control"/></br>
             <label>Qual UBS Frequenta:</label><select id="ubsFrequenta" class="selectpicker form-control">
                                                 <option>Mustard</option>
@@ -82,8 +74,3 @@
         <p>&copy; 2016 Company, Inc.</p>
       </footer>
     </div> <!-- /container -->
-
-
-<?php
-  include('footer.php');
-?>
