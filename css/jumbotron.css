@@ -3,3 +3,10 @@ body {
   padding-top: 50px;
   padding-bottom: 20px;
 }
+
+.selectPositivo{
+  background: #5cb85c; color: #fff;
+}
+.selectNegativo{
+  background: #CD5C5C; color: #fff;
+}
