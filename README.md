@@ -10,5 +10,5 @@ Algumas tecnologias utilizadas nesse projeto:
   - PHP
   - MySQL
   
-  Regras para o projeto (Aqui pode colocar algumas regras e definições para o projeto, como por exemplo, 
-  nome das variaveis no banco de dados)
+Regras para o projeto (Aqui pode colocar algumas regras e definições para o projeto, como por exemplo, 
+nome das variaveis no banco de dados):
