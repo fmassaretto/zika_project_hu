@@ -2,15 +2,20 @@
   include('header.php');
 ?>
 
-    <script type='text/javascript' src='js/cep.js'></script>
+    <div class="container" id="w">
+      <div class="col-md-24" id="painelInfoPaciente">
+        <h3>{nome da paciente}</h3> <h4>{Numero do Caso}</h4>
+      </div>
+    </div>
 
     <div class="container">
+
       <!-- Example row of columns -->
       <div class="row">
 
         <!-- Aqui começa a coluna da esquerda -->
         <div class="col-sm-7 nav navbar-left">
-          <h3>{nome da paciente}</h3> <h4>{Numero do Caso}</h4>
+
             <form>
               <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
