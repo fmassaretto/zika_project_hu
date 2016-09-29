@@ -56,15 +56,24 @@
             <label>Telefone (Fixo/Segundo):</label><input type="text" name="telFixoSec" id="telFixoSec" class="form-control" /></br>
             <label>Telefone (Recado/Terceiro):</label><input type="text" name="telRecTer" id="telRecTer" class="form-control" /><label>Nome:</label><input type="text" name="nrCaso" class="form-control"/></br>
 
-            <input type="submit" name="salvar" value="Salvar" class="btn btn-success btn-sm"/>
-            <input type="button" name="Cancelar" value="Cancelar" class="btn btn-default btn-sm"/>
-          </form>
         </div>
         <div class="col-md-9">
           <h2>Heading</h2>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
        </div>
+      </div>
+
+      <div class="row" id="btnEnvioCancela">
+        <div class="col-xs-7 col-sm-9 col-md-9"></div>
+
+        <div class="col-xs-10 col-sm-6 col-md-6">
+            <input type="submit" name="salvar" value="Salvar" class="btn btn-success btn-sm"/>
+            <input type="button" name="Cancelar" value="Cancelar" class="btn btn-default btn-sm"/>
+          </form>
+        </div>
+
+        <div class="col-xs-7 col-sm-9 col-md-9"></div>
       </div>
 
       <hr>
