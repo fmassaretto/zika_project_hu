@@ -10,3 +10,9 @@ body {
 .selectNegativo{
   background: #CD5C5C; color: #fff;
 }
+
+#w{
+  margin-top: 0px;
+  margin-bottom: 10px;
+  background-color: #ffffea;
+}
