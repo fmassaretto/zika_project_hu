@@ -23,41 +23,39 @@
               <div class="panel-heading" role="tab" id="headingOne">
                 <h4 class="panel-title">
                   <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Soro <span class="glyphicon glyphicon-ok" aria-hidden="True" ></span>
+                    Zika Vírus <span class="glyphicon glyphicon-ok" aria-hidden="True" ></span>
                   </a>
                 </h4>
               </div>
               <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                 <div class="panel-body">
-                  <label>Em Qual Freezer Encontra a Amostra:</label><select id="amostraFreezerSoro" class="form-control">
+                  <label>Zika Vírus:</label><input type="checkbox" name="chkZika" id="chkZika" class=""/>
+                  <label>Data da Amostra de Zika Vírus:</label><input type="date" name="dtAmostraZika" id="dtAmostraZika" class="form-control"/>
+                  <label>Data do Exame de Zika Vírus:</label><input type="date" name="dtExameZika" id="dtExameZika" class="form-control"/>
+                  <label>Material Utilizado para Zika Vírus:</label><select id="matUtilizadoZika" class="form-control">
                                                                       <option class=""></option>
-                                                                      <option class="">Freezer 1</option>
-                                                                      <option class="">Freezer 2</option>
-                                                                      <option class="">Feezer 3</option>
+                                                                      <option class="">Urina</option>
+                                                                      <option class="">Saliva</option>
+                                                                      <option class="">Soro</option>
+                                                                      <option class="">Plasma</option>
                                                                     </select>
-                  <label>Em Qual Prateleira Encontra a Amostra:</label><select id="amostraPrateleiraSoro" class="form-control">
-                                                                      <option class=""></option>
-                                                                      <option class="">Prateleira 1</option>
-                                                                      <option class="">Prateleira 2</option>
-                                                                      <option class="">Prateleira 3</option>
-                                                                      <option class="">Prateleira 4</option>
-                                                                      <option class="">Prateleira 5</option>
-                                                                      <option class="">Prateleira 6</option>
+                  <label>Resultado para Zika Vírus:</label><select id="resultadoZika" class="form-control">
+                                                                      <option></option>
+                                                                      <option class="selectPositivo">Positivo</option>
+                                                                      <option class="selectNegativo">Negativo</option>
+                                                                      <option class="selectIndefinido">Indefinido</option>
+                                                                      <option class="selectNaoTestado">Não Testado</option>
                                                                     </select>
-                  <div id="primeiraColetaSoro" class="primaDiv">
-                    <label>Data da Primeira Coleta:</label><input type="date" name="dtPrimeiraColetaSoro" id="dtPrimeiraColetaSoro" class="form-control"/>
-                    <label>Quantidade Disponível da Amostra:</label><input type="number" name="qtDiponivelPrimeiroSoro" id="qtDiponivelPrimeiroSoro" min="0" max="100" class="form-control"/>
-                    <label>Quantidade de Amostra Utilizada:</label><input type="number" name="qtUtilizadaPrimeiroSoro" id="qtUtilizadaPrimeiroSoro" min="0" max="100" class="form-control"/>
-                    <label>Caixa Número:</label><input type="number" name="caixaPrimeiroSoro" id="caixaPrimeiroSoro" min="0" max="500" class="form-control"/>
-                  </div>
-                  <div id="segundaColetaSoro"></div>
-                  <div id="terceiraColetaSoro"></div>
-                  <div id="quartaColetaSoro"></div>
-                  <div id="quintaColetaSoro"></div>
-                  <div id="sextaColetaSoro"></div>
-
-                  <a href="javascript:void(0)" id="addSoro" class="glyphicon glyphicon-plus">Adicionar Amostra</a>
-
+                  <label>Especificar Teste Usado para Zika Vírus:</label><select id="especTesteUsadoZika" class="form-control">
+                                                                            <option></option>
+                                                                            <option class="">RT-PCR</option>
+                                                                            <option class="">Elisa</option>
+                                                                            <option class="">Macrorray</option>
+                                                                            <option class="">CT</option>
+                                                                            <option class="">Outro</option>
+                                                                          </select>
+                  <label>CT Zika Vírus:</label><input type="number" name="ctZika" id="ctZika" min="0" max="100" class="form-control"/>
+                  <label>Outro:</label><input type="text" name="outroZika" id="outroZika" class="form-control"/>
                 </div>
               </div>
             </div>
@@ -230,11 +228,11 @@
 
     <!-- Aqui começa a coluna da direita -->
     <div class="col-sm-7 col-offset-1 nav navbar-left">
-      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+      <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
         <div class="panel panel-default">
           <div class="panel-heading" role="tab" id="headingSix">
             <h4 class="panel-title">
-              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+              <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
                 Dengue <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
               </a>
             </h4>
@@ -274,7 +272,7 @@
         <div class="panel panel-default">
           <div class="panel-heading" role="tab" id="headingSeven">
             <h4 class="panel-title">
-              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
                 Vírus do Oeste do Nilo <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
               </a>
             </h4>
@@ -315,7 +313,7 @@
         <div class="panel panel-default">
           <div class="panel-heading" role="tab" id="headingEight">
             <h4 class="panel-title">
-              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
                 Toxoplasmose <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
               </a>
             </h4>
@@ -356,7 +354,7 @@
           <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingNine">
               <h4 class="panel-title">
-                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
                   Cytomegalovirus <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
                 </a>
               </h4>
@@ -396,7 +394,7 @@
           <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingTen">
               <h4 class="panel-title">
-                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
                   HIV <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
                 </a>
               </h4>
@@ -437,14 +435,14 @@
           <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingEleven">
               <h4 class="panel-title">
-                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
                   Outro <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
                 </a>
               </h4>
             </div>
             <div id="collapseEleven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
               <div class="panel-body">
-                <label>Outro:</label><input type="checkbox" name="chkOutro" id="chkOutro" class=""/>
+                <label>Outro:</label><input type="checkbox" name="chkOutro" id="chkOutro" class="form-control"/>
                 <label>Qual:</label><input type="text" name="txtQualOutro" id="txtQualOutro" class="form-control"/>
                 <label>Data da Amostra de Outro:</label><input type="date" name="dtAmostraOutro" id="dtAmostraOutro" class="form-control"/>
                 <label>Data do Exame de Outro:</label><input type="date" name="dtExameOutro" id="dtExameOutro" class="form-control"/>
@@ -482,7 +480,7 @@
 
     <div class="col-sm-9">
       <?php
-        include('menuAsidePaciente.html');
+        include('menuAsidePaciente.php');
       ?>
    </div>
   </div>
@@ -505,7 +503,6 @@
     <p>&copy; 2016 Company, Inc.</p>
   </footer>
 </div> <!-- /container -->
- <!-- /container -->
 
 
 <?php
