@@ -18,7 +18,7 @@
               <div ng-controller="cepCtrl">
                 <label>CEP:</label><input type="text" name="cep" id="cep" size="10" maxlength="9" ng-model="cep" ng-blur="findCep()" class="form-control"/>
                 <label>Endereço:</label><input type="text" name="rua" id="rua" value="{{resultCEP.logradouro}}" class="form-control"/>
-                <label>Número:</label><input type="numero" name="numero" id="numero" class="form-control"/>
+                <label>Número:</label><input type="numero" name="numero" id="numero" ng-model="numero" class="form-control"/>
                 <!-- <label>Estado:</label><input type="text" name="estado" id="estado" class="form-control" class="form-control"/>
                 <label>Cidade:</label><input type="text" name="cidade" id="cidade" class="form-control" class="form-control"/>
                 <label>Bairro:</label><input type="text" name="bairro" id="bairro" class="form-control" class="form-control"/>  -->
@@ -35,44 +35,47 @@
                       <h4 class="modal-title" id="myModalLabel">Paciente Desistiu do Projeto</h4>
                     </div>
                     <div class="modal-body">
-                      <form class="well">
-                        <label>Data da Desistência:</label><input type="date" name="dtDesistencia" id="dtDesistencia"/>
-                        <label>Motivo da Desistência:</label><textarea name="txtMotivoDesistencia" id="txtMotivoDesistencia" rows="4" cols="40"></textarea>
+                      <form class="form-control">
+                        <label>Data da Desistência:</label><input type="date" name="dtDesistencia" class="form-control" id="dtDesistencia"/>
+                        <label>Motivo da Desistência:</label><textarea name="txtMotivoDesistencia" class="form-control" id="txtMotivoDesistencia" rows="4" cols="40"></textarea>
                       </form>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-default " data-dismiss="modal">Fechar</button>
-                      <button type="button" class="btn btn-primary">Salvar</button>
+                      <button type="button" class="btn btn-danger">Salvar</button>
                     </div>
                   </div>
                 </div>
-              </div>
-        </div>
+              </div><!-- fim do modal -->
+        </div> <!-- fechou coluna esquerda -->
 
         <div class="col-sm-7 col-offset-1 nav navbar-left">
-            <label>Data de Entrada no Projeto:</label><input type="date" name="dtEntradaProjeto" id="dtEntradaProjeto" class="form-control"/>
-            <label>Qual UBS Frequenta:</label><select id="ubsFrequenta" class="form-control">
-                                                <option ng-repeat="sn in simnao">{{ sn.nome }}</option>
-                                              </select>
-            <label>Assinou o Termo de Consentimento?</label><select id="assTermConsent" class="form-control">
-                                                              <option ng-repeat="sn in simnao">{{ sn.nome }}</option>
-                                                            </select>
-            <label>Melhor Horário para Contato:</label><select id="melhorHorarioContato" class="form-control" multiple>
-                                                        <option ng-repeat="melhorHorario in melhoresHorarios">{{ melhorHorario.nome }}</option>
-                                                      </select>
-                                                      <hr>
-            <label>Telefone (Celular/Principal):</label><input type="text" name="telCelPri" id="telCelPri" class="form-control" />
-            <label>Telefone (Fixo/Segundo):</label><input type="text" name="telFixoSec" id="telFixoSec" class="form-control" />
-            <label>Telefone (Recado/Terceiro):</label><input type="text" name="telRecTer" id="telRecTer" class="form-control" /><label>Nome:</label><input type="text" name="nrCaso" class="form-control"/>
-
-            <input type="submit" name="editar" value="Editar" class="btn btn-success btn-sm"/>
-            <input type="button" name="cancelar" value="Cancelar" class="btn btn-default btn-sm"/>
-            <input type="button" name="desistiu" value="Desistiu do Projeto" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modalDesistiu"/>
-
+            <div class="fom">
+              <label>Data de Entrada no Projeto:</label><input type="date" name="dtEntradaProjeto" id="dtEntradaProjeto" class="form-control"/>
+              <label>Qual UBS Frequenta:</label><select id="ubsFrequenta" class="form-control">
+                                                  <option ng-repeat="sn in simnao">{{ sn.nome }}</option>
+                                                </select>
+              <label>Assinou o Termo de Consentimento?</label><select id="assTermConsent" class="form-control">
+                                                                <option ng-repeat="sn in simnao">{{ sn.nome }}</option>
+                                                              </select>
+              <label>Melhor Horário para Contato:</label><select id="melhorHorarioContato" class="form-control" multiple>
+                                                          <option ng-repeat="melhorHorario in melhoresHorarios">{{ melhorHorario.nome }}</option>
+                                                        </select>
+                                                        <hr>
+              <label>Telefone (Celular/Principal):</label><input type="text" name="telCelPri" id="telCelPri" class="form-control" />
+              <label>Telefone (Fixo/Segundo):</label><input type="text" name="telFixoSec" id="telFixoSec" class="form-control" />
+              <label>Telefone (Recado/Terceiro):</label><input type="text" name="telRecTer" id="telRecTer" class="form-control" />
+              <label>Nome:</label><input type="text" name="nrCaso" class="form-control"/>
+            </div>
+            <div class="botoes">
+              <input type="submit" name="editar" value="Editar" class="btn btn-success btn-sm"/>
+              <input type="button" name="cancelar" value="Cancelar" class="btn btn-default btn-sm"/>
+              <input type="button" name="desistiu" value="Desistiu do Projeto" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modalDesistiu"/>
+            </div>
           </form>
-        </div>
+        </div> <!-- fechou coluna direita-->
 
-        <div class="col-sm-9" ng-include="'partials/menuAsidePaciente.html'">
+        <div class="col-sm-9" id="menuAside" ng-include="'partials/menuAsidePaciente.html'"></div>
 
       </div>
     </div> <!-- /container -->

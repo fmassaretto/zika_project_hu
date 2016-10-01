@@ -1,4 +1,4 @@
-    <div class="container">
+    <div class="container" ng-controller="selectPreValuesController">
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-7 nav navbar-left">
@@ -15,62 +15,44 @@
                                                         </select>
               <label>Data da Mudança de Grupo:</label><input type="date" name="dtMudancaGrupo" id="dtMudancaGrupo" class="form-control"/>
               <hr>
-              <label>CEP:</label><input type="text" name="cep" id="cep" class="form-control"/>
-              <label>Endereço:</label><input type="text" name="endereco" id="endereco" class="form-control"/>
-              <label>Número:</label><input type="numero" name="numero" id="numero" class="form-control"/>
-              <!-- <label>Estado:</label><input type="text" name="estado" id="estado" class="form-control" class="form-control"/>
-              <label>Cidade:</label><input type="text" name="cidade" id="cidade" class="form-control" class="form-control"/>
-              <label>Bairro:</label><input type="text" name="bairro" id="bairro" class="form-control" class="form-control"/>  -->
-              <label>Estado:</label><select id="estado" name="estado" class="form-control"></select>
-              <label>Cidade:</label><select id="cidade" name="cidade" class="form-control"></select>
-              <label>Bairro:</label><select id="bairro" name="bairro" class="form-control"></select>
-
+              <div ng-controller="cepCtrl">
+                <label>CEP:</label><input type="text" name="cep" id="cep" size="10" maxlength="9" ng-model="cep" ng-blur="findCep()" class="form-control"/>
+                <label>Endereço:</label><input type="text" name="rua" id="rua" value="{{resultCEP.logradouro}}" class="form-control"/>
+                <label>Número:</label><input type="numero" name="numero" id="numero" ng-model="numero" class="form-control"/>
+                <!-- <label>Estado:</label><input type="text" name="estado" id="estado" class="form-control" class="form-control"/>
+                <label>Cidade:</label><input type="text" name="cidade" id="cidade" class="form-control" class="form-control"/>
+                <label>Bairro:</label><input type="text" name="bairro" id="bairro" class="form-control" class="form-control"/>  -->
+                <label>Estado:</label><select id="uf" name="uf" class="form-control" data-live-search="true"><option value="{{resultCEP.uf}}">{{resultCEP.uf}}</option></select>
+                <label>Cidade:</label><select id="cidade" name="cidade" class="form-control" data-live-search="true"><option value="{{resultCEP.localidade}}">{{resultCEP.localidade}}</option></select>
+                <label>Bairro:</label><select id="bairro" name="bairro" class="form-control" data-live-search="true"><option value="{{resultCEP.bairro}}">{{resultCEP.bairro}}</option></select>
+              </div>
         </div>
 
         <div class="col-md-7 col-offset-1 nav navbar-left">
             <label>Data de Entrada no Projeto:</label><input type="date" name="dtEntradaProjeto" id="dtEntradaProjeto" class="form-control"/>
-            <label>Qual UBS Frequenta:</label><select id="ubsFrequenta" class="selectpicker form-control">
-                                                <option>Mustard</option>
-                                                <option class="special">Ketchup</option>
-                                                <option style="background: #5cb85c; color: #fff;">Relish</option>
+            <label>Qual UBS Frequenta:</label><select id="ubsFrequenta" class="form-control">
+                                                <option ng-repeat="sn in simnao">{{ sn.nome }}</option>
                                               </select>
-            <label>Assinou o Termo de Consentimento?</label><select id="assTermConsent" class="selectpicker form-control">
-                                                              <option>Sim</option>
-                                                              <option>Não</option>
+            <label>Assinou o Termo de Consentimento?</label><select id="assTermConsent" class="form-control">
+                                                              <option ng-repeat="sn in simnao">{{ sn.nome }}</option>
                                                             </select>
-            <label>Melhor Horário para Contato:</label><select id="melhorHorarioContato" class="selectpicker form-control" multiple>
-                                                        <option>Manhã</option>
-                                                        <option>Tarde</option>
-                                                        <option>Noite</option>
+            <label>Melhor Horário para Contato:</label><select id="melhorHorarioContato" class="form-control" multiple>
+                                                        <option ng-repeat="melhorHorario in melhoresHorarios">{{ melhorHorario.nome }}</option>
                                                       </select>
                                                       <hr>
             <label>Telefone (Celular/Principal):</label><input type="text" name="telCelPri" id="telCelPri" class="form-control" />
             <label>Telefone (Fixo/Segundo):</label><input type="text" name="telFixoSec" id="telFixoSec" class="form-control" />
             <label>Telefone (Recado/Terceiro):</label><input type="text" name="telRecTer" id="telRecTer" class="form-control" /><label>Nome:</label><input type="text" name="nrCaso" class="form-control"/>
-
-        </div>
-        <div class="col-md-9">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-       </div>
-      </div>
-
-      <div class="row" id="btnEnvioCancela">
-        <div class="col-xs-7 col-sm-9 col-md-9"></div>
-
-        <div class="col-xs-10 col-sm-6 col-md-6">
-            <input type="submit" name="salvar" value="Salvar" class="btn btn-success btn-sm"/>
-            <input type="button" name="Cancelar" value="Cancelar" class="btn btn-default btn-sm"/>
-          </form>
+              <div class="botoes">
+                <input type="submit" name="salvar" value="Salvar" class="btn btn-success btn-sm"/>
+                <input type="button" name="Cancelar" value="Cancelar" class="btn btn-default btn-sm"/>
+              </div>
+            </form>
         </div>
 
-        <div class="col-xs-7 col-sm-9 col-md-9"></div>
+          <div class="col-sm-9" id="menuAside" ng-include="'partials/menuAsidePaciente.html'"></div>
+
       </div>
 
-      <hr>
 
-      <footer>
-        <p>&copy; 2016 Company, Inc.</p>
-      </footer>
     </div> <!-- /container -->

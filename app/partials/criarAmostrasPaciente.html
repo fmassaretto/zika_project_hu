@@ -350,25 +350,15 @@
               </div>
             </div>
           </div><!-- fechou painel group direita-->
+          <div class="botoes">
+            <input type="submit" name="editar" value="Editar" class="btn btn-success btn-sm"/>
+            <input type="button" name="cancelar" value="Cancelar" class="btn btn-default btn-sm"/>
+          </div>
+          </form>
+
         </div><!-- fechou coluna direita-->
 
-        <div class="col-sm-9">
-          <div ng-include="'partials/menuAsidePaciente.html'"></div>
-       </div>
+          <div class="col-sm-9" id="menuAside" ng-include="'partials/menuAsidePaciente.html'"></div>
+
      </div><!-- fechou row -->
-
-      <div class="row" id="btnEnvioCancela">
-        <div class="col-xs-20 col-sm-9 col-md-9"></div>
-
-        <div class="col-xs-10 col-sm-6 col-md-6">
-          <input type="submit" name="editar" value="Editar" class="btn btn-success btn-sm"/>
-          <input type="button" name="cancelar" value="Cancelar" class="btn btn-default btn-sm"/>
-          </form>
-        </div>
-
-        <div class="col-xs-20 col-sm-9 col-md-9"></div>
-      </div>
-
-      <hr>
-
     </div> <!-- /container -->
