@@ -1,0 +1,374 @@
+<script src="js/amostras/addAmostras.js"></script>
+    <div class="container" id="w">
+      <div class="col-md-24" id="painelInfoPaciente">
+        <h3>{nome da paciente}</h3> <h4>{Numero do Caso}</h4>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- Começa a row -->
+      <div class="row">
+
+        <!-- Aqui começa a coluna da esquerda -->
+        <div class="col-sm-7 nav navbar-left">
+
+            <form>
+              <!-- inicio do painel group esquerda-->
+              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                      <a role="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Soro <span class="glyphicon glyphicon-ok" aria-hidden="True" ></span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                      <label>Em Qual Freezer Encontra a Amostra:</label><select id="amostraFreezerSoro" class="form-control">
+                                                                          <option class=""></option>
+                                                                          <option class="">Freezer 1</option>
+                                                                          <option class="">Freezer 2</option>
+                                                                          <option class="">Feezer 3</option>
+                                                                        </select>
+                      <label>Em Qual Prateleira Encontra a Amostra:</label><select id="amostraPrateleiraSoro" class="form-control">
+                                                                          <option class=""></option>
+                                                                          <option class="">Prateleira 1</option>
+                                                                          <option class="">Prateleira 2</option>
+                                                                          <option class="">Prateleira 3</option>
+                                                                          <option class="">Prateleira 4</option>
+                                                                          <option class="">Prateleira 5</option>
+                                                                          <option class="">Prateleira 6</option>
+                                                                        </select>
+                      <div id="primeiraColetaSoro">
+                        <label>Data da Primeira Coleta:</label><input type="date" name="dtPrimeiraColetaSoro" id="dtPrimeiraColetaSoro" class="form-control"/>
+                        <label>Quantidade Disponível da Amostra:</label><input type="number" name="qtDiponivelPrimeiroSoro" id="qtDiponivelPrimeiroSoro" min="0" max="100" class="form-control"/>
+                        <label>Quantidade de Amostra Utilizada:</label><input type="number" name="qtUtilizadaPrimeiroSoro" id="qtUtilizadaPrimeiroSoro" min="0" max="100" class="form-control"/>
+                        <label>Caixa Número:</label><input type="number" name="caixaPrimeiroSoro" id="caixaPrimeiroSoro" min="0" max="500" class="form-control"/>
+                      </div>
+                      <div id="segundaColetaSoro"></div>
+                      <div id="terceiraColetaSoro"></div>
+                      <div id="quartaColetaSoro"></div>
+                      <div id="quintaColetaSoro"></div>
+                      <div id="sextaColetaSoro"></div>
+                      <a href="javascript:void(0)" class="addAmostra" id="addSoro" ><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Adicionar Amostra</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Plasma <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body">
+                      <label>Em Qual Freezer Encontra a Amostra:</label><select id="amostraFreezerPlasma" class="form-control">
+                                                                          <option class=""></option>
+                                                                          <option class="">Freezer 1</option>
+                                                                          <option class="">Freezer 2</option>
+                                                                          <option class="">Feezer 3</option>
+                                                                        </select>
+                      <label>Em Qual Prateleira Encontra a Amostra:</label><select id="amostraPrateleiraPlasma" class="form-control">
+                                                                          <option class=""></option>
+                                                                          <option class="">Prateleira 1</option>
+                                                                          <option class="">Prateleira 2</option>
+                                                                          <option class="">Prateleira 3</option>
+                                                                          <option class="">Prateleira 4</option>
+                                                                          <option class="">Prateleira 5</option>
+                                                                          <option class="">Prateleira 6</option>
+                                                                        </select>
+                      <div id="primeiraColetaPlasma">
+                        <label>Data da Primeira Coleta:</label><input type="date" name="dtPrimeiraColetaPlasma" id="dtPrimeiraColetaPlasma" class="form-control"/>
+                        <label>Quantidade Disponível da Amostra:</label><input type="number" name="qtDiponivelPrimeiroPlasma" id="qtDiponivelPrimeiroPlasma" min="0" max="100" class="form-control"/>
+                        <label>Quantidade de Amostra Utilizada:</label><input type="number" name="qtUtilizadaPrimeiroPlasma" id="qtUtilizadaPrimeiroPlasma" min="0" max="100" class="form-control"/>
+                        <label>Caixa Número:</label><input type="number" name="caixaPrimeiroPlasma" id="caixaPrimeiroPlasma" min="0" max="500" class="form-control"/>
+                      </div>
+                      <div id="segundaColetaPlasma"></div>
+                      <div id="terceiraColetaPlasma"></div>
+                      <div id="quartaColetaPlasma"></div>
+                      <div id="quintaColetaPlasma"></div>
+                      <div id="sextaColetaPlasma"></div>
+                      <a href="javascript:void(0)" class="addAmostra" class="addAmostra" id="addPlasma" ><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Adicionar Amostra</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingThree">
+                    <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Saliva <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body">
+                      <label>Em Qual Freezer Encontra a Amostra:</label><select id="amostraFreezerSaliva" class="form-control">
+                                                                          <option class=""></option>
+                                                                          <option class="">Freezer 1</option>
+                                                                          <option class="">Freezer 2</option>
+                                                                          <option class="">Feezer 3</option>
+                                                                        </select>
+                      <label>Em Qual Prateleira Encontra a Amostra:</label><select id="amostraPrateleiraSaliva" class="form-control">
+                                                                          <option class=""></option>
+                                                                          <option class="">Prateleira 1</option>
+                                                                          <option class="">Prateleira 2</option>
+                                                                          <option class="">Prateleira 3</option>
+                                                                          <option class="">Prateleira 4</option>
+                                                                          <option class="">Prateleira 5</option>
+                                                                          <option class="">Prateleira 6</option>
+                                                                        </select>
+                      <div id="primeiraColetaSaliva">
+                        <label>Data da Primeira Coleta:</label><input type="date" name="dtPrimeiraColetaSaliva" id="dtPrimeiraColetaSaliva" class="form-control"/>
+                        <label>Quantidade Disponível da Amostra:</label><input type="number" name="qtDiponivelPrimeiroSaliva" id="qtDiponivelPrimeiroSaliva" min="0" max="100" class="form-control"/>
+                        <label>Quantidade de Amostra Utilizada:</label><input type="number" name="qtUtilizadaPrimeiroSaliva" id="qtUtilizadaPrimeiroSaliva" min="0" max="100" class="form-control"/>
+                        <label>Caixa Número:</label><input type="number" name="caixaPrimeiroSaliva" id="caixaPrimeiroSaliva" min="0" max="500" class="form-control"/>
+                      </div>
+                      <div id="segundaColetaSaliva"></div>
+                      <div id="terceiraColetaSaliva"></div>
+                      <div id="quartaColetaSaliva"></div>
+                      <div id="quintaColetaSaliva"></div>
+                      <div id="sextaColetaSaliva"></div>
+                      <a href="javascript:void(0)" class="addAmostra" id="addSaliva" ><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Adicionar Amostra</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingFour">
+                    <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Urina <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                    <div class="panel-body">
+                      <label>Em Qual Freezer Encontra a Amostra:</label><select id="amostraFreezerUrina" class="form-control">
+                                                                          <option class=""></option>
+                                                                          <option class="">Freezer 1</option>
+                                                                          <option class="">Freezer 2</option>
+                                                                          <option class="">Feezer 3</option>
+                                                                        </select>
+                      <label>Em Qual Prateleira Encontra a Amostra:</label><select id="amostraPrateleiraUrina" class="form-control">
+                                                                          <option class=""></option>
+                                                                          <option class="">Prateleira 1</option>
+                                                                          <option class="">Prateleira 2</option>
+                                                                          <option class="">Prateleira 3</option>
+                                                                          <option class="">Prateleira 4</option>
+                                                                          <option class="">Prateleira 5</option>
+                                                                          <option class="">Prateleira 6</option>
+                                                                        </select>
+                      <div id="primeiraColetaUrina">
+                        <label>Data da Primeira Coleta:</label><input type="date" name="dtPrimeiraColetaUrina" id="dtPrimeiraColetaUrina" class="form-control"/>
+                        <label>Quantidade Disponível da Amostra:</label><input type="number" name="qtDiponivelPrimeiroUrina" id="qtDiponivelPrimeiroUrina" min="0" max="100" class="form-control"/>
+                        <label>Quantidade de Amostra Utilizada:</label><input type="number" name="qtUtilizadaPrimeiroUrina" id="qtUtilizadaPrimeiroUrina" min="0" max="100" class="form-control"/>
+                        <label>Caixa Número:</label><input type="number" name="caixaPrimeiroUrina" id="caixaPrimeiroUrina" min="0" max="500" class="form-control"/>
+                      </div>
+                      <div id="segundaColetaUrina"></div>
+                      <div id="terceiraColetaUrina"></div>
+                      <div id="quartaColetaUrina"></div>
+                      <div id="quintaColetaUrina"></div>
+                      <div id="sextaColetaUrina"></div>
+                      <a href="javascript:void(0)" class="addAmostra" id="addUrina" ><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Adicionar Amostra</a>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- fechou painel group esquerda-->
+            </div><!-- fechou coluna da esquerda-->
+
+        <!-- Aqui começa a coluna da direita -->
+        <div class="col-sm-7 col-offset-1 nav navbar-left">
+          <!-- inicio do painel group direita-->
+          <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingFive">
+                <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    Colostro <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                <div class="panel-body">
+                  <label>Em Qual Freezer Encontra a Amostra:</label><select id="amostraFreezerColostro" class="form-control">
+                                                                      <option class=""></option>
+                                                                      <option class="">Freezer 1</option>
+                                                                      <option class="">Freezer 2</option>
+                                                                      <option class="">Feezer 3</option>
+                                                                    </select>
+                  <label>Em Qual Prateleira Encontra a Amostra:</label><select id="amostraPrateleiraColostro" class="form-control">
+                                                                      <option class=""></option>
+                                                                      <option class="">Prateleira 1</option>
+                                                                      <option class="">Prateleira 2</option>
+                                                                      <option class="">Prateleira 3</option>
+                                                                      <option class="">Prateleira 4</option>
+                                                                      <option class="">Prateleira 5</option>
+                                                                      <option class="">Prateleira 6</option>
+                                                                    </select>
+                  <div id="primeiraColetaColostro">
+                    <label>Data da Primeira Coleta:</label><input type="date" name="dtPrimeiraColetaColostro" id="dtPrimeiraColetaColostro" class="form-control"/>
+                    <label>Quantidade Disponível da Amostra:</label><input type="number" name="qtDiponivelPrimeiroColostro" id="qtDiponivelPrimeiroColostro" min="0" max="100" class="form-control"/>
+                    <label>Quantidade de Amostra Utilizada:</label><input type="number" name="qtUtilizadaPrimeiroColostro" id="qtUtilizadaPrimeiroColostro" min="0" max="100" class="form-control"/>
+                    <label>Caixa Número:</label><input type="number" name="caixaPrimeiroColostro" id="caixaPrimeiroColostro" min="0" max="500" class="form-control"/>
+                  </div>
+                  <div id="segundaColetaColostro"></div>
+                  <div id="terceiraColetaColostro"></div>
+                  <div id="quartaColetaColostro"></div>
+                  <div id="quintaColetaColostro"></div>
+                  <div id="sextaColetaColostro"></div>
+                  <a href="javascript:void(0)" class="addAmostra" id="addColostro" ><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Adicionar Amostra</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingSix">
+                <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    Liquor <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                <div class="panel-body">
+                  <label>Em Qual Freezer Encontra a Amostra:</label><select id="amostraFreezerLiquor" class="form-control">
+                                                                      <option class=""></option>
+                                                                      <option class="">Freezer 1</option>
+                                                                      <option class="">Freezer 2</option>
+                                                                      <option class="">Feezer 3</option>
+                                                                    </select>
+                  <label>Em Qual Prateleira Encontra a Amostra:</label><select id="amostraPrateleiraLiquor" class="form-control">
+                                                                      <option class=""></option>
+                                                                      <option class="">Prateleira 1</option>
+                                                                      <option class="">Prateleira 2</option>
+                                                                      <option class="">Prateleira 3</option>
+                                                                      <option class="">Prateleira 4</option>
+                                                                      <option class="">Prateleira 5</option>
+                                                                      <option class="">Prateleira 6</option>
+                                                                    </select>
+                  <div id="primeiraColetaLiquor">
+                    <label>Data da Primeira Coleta:</label><input type="date" name="dtPrimeiraColetaLiquor" id="dtPrimeiraColetaLiquor" class="form-control"/>
+                    <label>Quantidade Disponível da Amostra:</label><input type="number" name="qtDiponivelPrimeiroLiquor" id="qtDiponivelPrimeiroLiquor" min="0" max="100" class="form-control"/>
+                    <label>Quantidade de Amostra Utilizada:</label><input type="number" name="qtUtilizadaPrimeiroLiquor" id="qtUtilizadaPrimeiroLiquor" min="0" max="100" class="form-control"/>
+                    <label>Caixa Número:</label><input type="number" name="caixaPrimeiroLiquor" id="caixaPrimeiroLiquor" min="0" max="500" class="form-control"/>
+                  </div>
+                  <div id="segundaColetaLiquor"></div>
+                  <div id="terceiraColetaLiquor"></div>
+                  <div id="quartaColetaLiquor"></div>
+                  <div id="quintaColetaLiquor"></div>
+                  <div id="sextaColetaLiquor"></div>
+                  <a href="javascript:void(0)" class="addAmostra" id="addLiquor" ><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Adicionar Amostra</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingSeven">
+                <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                    Placenta (frag.) <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                <div class="panel-body">
+                  <label>Em Qual Freezer Encontra a Amostra:</label><select id="amostraFreezerPlacenta" class="form-control">
+                                                                      <option class=""></option>
+                                                                      <option class="">Freezer 1</option>
+                                                                      <option class="">Freezer 2</option>
+                                                                      <option class="">Feezer 3</option>
+                                                                    </select>
+                  <label>Em Qual Prateleira Encontra a Amostra:</label><select id="amostraPrateleiraPlacenta" class="form-control">
+                                                                      <option class=""></option>
+                                                                      <option class="">Prateleira 1</option>
+                                                                      <option class="">Prateleira 2</option>
+                                                                      <option class="">Prateleira 3</option>
+                                                                      <option class="">Prateleira 4</option>
+                                                                      <option class="">Prateleira 5</option>
+                                                                      <option class="">Prateleira 6</option>
+                                                                    </select>
+                  <div id="primeiraColetaPlacenta">
+                    <label>Data da Primeira Coleta:</label><input type="date" name="dtPrimeiraColetaPlacenta" id="dtPrimeiraColetaPlacenta" class="form-control"/>
+                    <label>Quantidade Disponível da Amostra:</label><input type="number" name="qtDiponivelPrimeiroPlacenta" id="qtDiponivelPrimeiroPlacenta" min="0" max="100" class="form-control"/>
+                    <label>Quantidade de Amostra Utilizada:</label><input type="number" name="qtUtilizadaPrimeiroPlacenta" id="qtUtilizadaPrimeiroPlacenta" min="0" max="100" class="form-control"/>
+                    <label>Caixa Número:</label><input type="number" name="caixaPrimeiroPlacenta" id="caixaPrimeiroPlacenta" min="0" max="500" class="form-control"/>
+                  </div>
+                  <div id="segundaColetaPlacenta"></div>
+                  <div id="terceiraColetaPlacenta"></div>
+                  <div id="quartaColetaPlacenta"></div>
+                  <div id="quintaColetaPlacenta"></div>
+                  <div id="sextaColetaPlacenta"></div>
+                  <a href="javascript:void(0)" class="addAmostra" id="addPlacenta" ><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Adicionar Amostra</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingEight">
+                <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                    Líquido Aminiótico <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+                <div class="panel-body">
+                  <label>Em Qual Freezer Encontra a Amostra:</label><select id="amostraFreezerLiqAminiotico" class="form-control">
+                                                                      <option class=""></option>
+                                                                      <option class="">Freezer 1</option>
+                                                                      <option class="">Freezer 2</option>
+                                                                      <option class="">Feezer 3</option>
+                                                                    </select>
+                  <label>Em Qual Prateleira Encontra a Amostra:</label><select id="amostraPrateleiraLiqAminiotico" class="form-control">
+                                                                      <option class=""></option>
+                                                                      <option class="">Prateleira 1</option>
+                                                                      <option class="">Prateleira 2</option>
+                                                                      <option class="">Prateleira 3</option>
+                                                                      <option class="">Prateleira 4</option>
+                                                                      <option class="">Prateleira 5</option>
+                                                                      <option class="">Prateleira 6</option>
+                                                                    </select>
+                  <div id="primeiraColetaLiqAminiotico">
+                    <label>Data da Primeira Coleta:</label><input type="date" name="dtPrimeiraColetaLiqAminiotico" id="dtPrimeiraColetaLiqAminiotico" class="form-control"/>
+                    <label>Quantidade Disponível da Amostra:</label><input type="number" name="qtDiponivelPrimeiroLiqAminiotico" id="qtDiponivelPrimeiroLiqAminiotico" min="0" max="100" class="form-control"/>
+                    <label>Quantidade de Amostra Utilizada:</label><input type="number" name="qtUtilizadaPrimeiroLiqAminiotico" id="qtUtilizadaPrimeiroLiqAminiotico" min="0" max="100" class="form-control"/>
+                    <label>Caixa Número:</label><input type="number" name="caixaPrimeiroLiqAminiotico" id="caixaPrimeiroLiqAminiotico" min="0" max="500" class="form-control"/>
+                  </div>
+                  <div id="segundaColetaLiqAminiotico"></div>
+                  <div id="terceiraColetaLiqAminiotico"></div>
+                  <div id="quartaColetaLiqAminiotico"></div>
+                  <div id="quintaColetaLiqAminiotico"></div>
+                  <div id="sextaColetaLiqAminiotico"></div>
+                  <a href="javascript:void(0)" class="addAmostra" id="addLiqAminiotico" ><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Adicionar Amostra</a>
+                </div>
+              </div>
+            </div>
+          </div><!-- fechou painel group direita-->
+        </div><!-- fechou coluna direita-->
+
+        <div class="col-sm-9">
+          <div ng-include="'partials/menuAsidePaciente.html'"></div>
+       </div>
+     </div><!-- fechou row -->
+
+      <div class="row" id="btnEnvioCancela">
+        <div class="col-xs-20 col-sm-9 col-md-9"></div>
+
+        <div class="col-xs-10 col-sm-6 col-md-6">
+          <input type="submit" name="editar" value="Editar" class="btn btn-success btn-sm"/>
+          <input type="button" name="cancelar" value="Cancelar" class="btn btn-default btn-sm"/>
+          </form>
+        </div>
+
+        <div class="col-xs-20 col-sm-9 col-md-9"></div>
+      </div>
+
+      <hr>
+
+    </div> <!-- /container -->

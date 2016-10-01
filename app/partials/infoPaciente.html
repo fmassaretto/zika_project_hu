@@ -1,0 +1,78 @@
+    <div class="container" ng-controller="selectPreValuesController">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-sm-7 nav navbar-left">
+            <form>
+              <label>Numero Caso:</label><input type="text" name="nrCaso" id="nrCaso" class="form-control"/>
+              <label>Nome Paciente:</label><input type="text" name="nomePaciente" id="nomePaciente" class="form-control"/>
+              <label>CPF:</label><input type="text" name="cpf" id="cpf" class="form-control"/>
+              <label>RG:</label><input type="text" name="rg" id="rg" class="form-control"/>
+              <label>Data de Nascimento:</label><input type="date" name="dtNascimento" id="dtNascimento" class="form-control"/>
+              <hr>
+              <label>Grupo da Gestante:</label><select id="grupoGestante" class="form-control">
+                                                          <option>Grupo 1 (Assintomática)</option>
+                                                          <option>Grupo 2 (Sintomática)</option>
+                                                        </select>
+              <label>Data da Mudança de Grupo:</label><input type="date" name="dtMudancaGrupo" id="dtMudancaGrupo" class="form-control"/>
+              <hr>
+              <div ng-controller="cepCtrl">
+                <label>CEP:</label><input type="text" name="cep" id="cep" size="10" maxlength="9" ng-model="cep" ng-blur="findCep()" class="form-control"/>
+                <label>Endereço:</label><input type="text" name="rua" id="rua" value="{{resultCEP.logradouro}}" class="form-control"/>
+                <label>Número:</label><input type="numero" name="numero" id="numero" class="form-control"/>
+                <!-- <label>Estado:</label><input type="text" name="estado" id="estado" class="form-control" class="form-control"/>
+                <label>Cidade:</label><input type="text" name="cidade" id="cidade" class="form-control" class="form-control"/>
+                <label>Bairro:</label><input type="text" name="bairro" id="bairro" class="form-control" class="form-control"/>  -->
+                <label>Estado:</label><select id="uf" name="uf" class="form-control" data-live-search="true"><option value="{{resultCEP.uf}}">{{resultCEP.uf}}</option></select>
+                <label>Cidade:</label><select id="cidade" name="cidade" class="form-control" data-live-search="true"><option value="{{resultCEP.localidade}}">{{resultCEP.localidade}}</option></select>
+                <label>Bairro:</label><select id="bairro" name="bairro" class="form-control" data-live-search="true"><option value="{{resultCEP.bairro}}">{{resultCEP.bairro}}</option></select>
+              </div>
+              <!-- Modal -->
+              <div class="modal fade" id="modalDesistiu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title" id="myModalLabel">Paciente Desistiu do Projeto</h4>
+                    </div>
+                    <div class="modal-body">
+                      <form class="well">
+                        <label>Data da Desistência:</label><input type="date" name="dtDesistencia" id="dtDesistencia"/>
+                        <label>Motivo da Desistência:</label><textarea name="txtMotivoDesistencia" id="txtMotivoDesistencia" rows="4" cols="40"></textarea>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default " data-dismiss="modal">Fechar</button>
+                      <button type="button" class="btn btn-primary">Salvar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+
+        <div class="col-sm-7 col-offset-1 nav navbar-left">
+            <label>Data de Entrada no Projeto:</label><input type="date" name="dtEntradaProjeto" id="dtEntradaProjeto" class="form-control"/>
+            <label>Qual UBS Frequenta:</label><select id="ubsFrequenta" class="form-control">
+                                                <option ng-repeat="sn in simnao">{{ sn.nome }}</option>
+                                              </select>
+            <label>Assinou o Termo de Consentimento?</label><select id="assTermConsent" class="form-control">
+                                                              <option ng-repeat="sn in simnao">{{ sn.nome }}</option>
+                                                            </select>
+            <label>Melhor Horário para Contato:</label><select id="melhorHorarioContato" class="form-control" multiple>
+                                                        <option ng-repeat="melhorHorario in melhoresHorarios">{{ melhorHorario.nome }}</option>
+                                                      </select>
+                                                      <hr>
+            <label>Telefone (Celular/Principal):</label><input type="text" name="telCelPri" id="telCelPri" class="form-control" />
+            <label>Telefone (Fixo/Segundo):</label><input type="text" name="telFixoSec" id="telFixoSec" class="form-control" />
+            <label>Telefone (Recado/Terceiro):</label><input type="text" name="telRecTer" id="telRecTer" class="form-control" /><label>Nome:</label><input type="text" name="nrCaso" class="form-control"/>
+
+            <input type="submit" name="editar" value="Editar" class="btn btn-success btn-sm"/>
+            <input type="button" name="cancelar" value="Cancelar" class="btn btn-default btn-sm"/>
+            <input type="button" name="desistiu" value="Desistiu do Projeto" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modalDesistiu"/>
+
+          </form>
+        </div>
+
+        <div class="col-sm-9" ng-include="'partials/menuAsidePaciente.html'">
+
+      </div>
+    </div> <!-- /container -->
