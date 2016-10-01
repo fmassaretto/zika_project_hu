@@ -29,7 +29,7 @@
               </div>
               <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                 <div class="panel-body">
-                  <label>Zika Vírus:</label><input type="checkbox" name="chkZika" id="chkZika" class=""/>
+                  <label>Zika Vírus:</label><input type="checkbox" name="chkZika" id="chkZika" class="form-control"/>
                   <label>Data da Amostra de Zika Vírus:</label><input type="date" name="dtAmostraZika" id="dtAmostraZika" class="form-control"/>
                   <label>Data do Exame de Zika Vírus:</label><input type="date" name="dtExameZika" id="dtExameZika" class="form-control"/>
                   <label>Material Utilizado para Zika Vírus:</label><select id="matUtilizadoZika" class="form-control">
@@ -70,7 +70,7 @@
               </div>
               <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                 <div class="panel-body">
-                  <label>Febre Amarela:</label><input type="checkbox" name="chkFebre" id="chkFebre" class=""/>
+                  <label>Febre Amarela:</label><input type="checkbox" name="chkFebre" id="chkFebre" class="form-control"/>
                   <label>Data da Amostra de Febre Amarela:</label><input type="date" name="dtAmostraFebre" id="dtAmostraFebre" class="form-control"/>
                   <label>Data do Exame de Febre Amarela:</label><input type="date" name="dtExameFebre" id="dtExameFebre" class="form-control"/>
                   <label>Material Utilizado para Febre Amarela:</label><select id="matUtilizadoFebre" class="form-control">
@@ -111,7 +111,7 @@
               </div>
               <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                 <div class="panel-body">
-                  <label>Vírus Chikungunya:</label><input type="checkbox" name="chkChikungunya" id="chkChikungunya" class=""/>
+                  <label>Vírus Chikungunya:</label><input type="checkbox" name="chkChikungunya" id="chkChikungunya" class="form-control"/>
                   <label>Data da Amostra do Vírus Chikungunya:</label><input type="date" name="dtAmostraChikungunya" id="dtAmostraChikungunya" class="form-control"/>
                   <label>Data do Exame do Vírus Chikungunya:</label><input type="date" name="dtExameChikungunya" id="dtExameChikungunya" class="form-control"/>
                   <label>Material Utilizado para Vírus Chikungunya:</label><select id="matUtilizadoChikungunya" class="form-control">
@@ -152,7 +152,7 @@
                 </div>
                 <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
                   <div class="panel-body">
-                    <label>Rubéola:</label><input type="checkbox" name="chkRubeola" id="chkRubeola" class=""/>
+                    <label>Rubéola:</label><input type="checkbox" name="chkRubeola" id="chkRubeola" class="form-control"/>
                     <label>Data da Amostra de Rubéola:</label><input type="date" name="dtAmostraRubeola" id="dtAmostraRubeola" class="form-control"/>
                     <label>Data do Exame de Rubéola:</label><input type="date" name="dtExameRubeola" id="dtExameRubeola" class="form-control"/>
                     <label>Material Utilizado para Rubéola:</label><select id="matUtilizadoRubeola" class="form-control">
@@ -193,7 +193,7 @@
                 </div>
                 <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
                   <div class="panel-body">
-                    <label>Herpes:</label><input type="checkbox" name="chkHerpes" id="chkHerpes" class=""/>
+                    <label>Herpes:</label><input type="checkbox" name="chkHerpes" id="chkHerpes" class="form-control"/>
                     <label>Data da Amostra de Herpes:</label><input type="date" name="dtAmostraHerpes" id="dtAmostraHerpes" class="form-control"/>
                     <label>Data do Exame de Herpes:</label><input type="date" name="dtExameHerpes" id="dtExameHerpes" class="form-control"/>
                     <label>Material Utilizado para Herpes:</label><select id="matUtilizadoHerpes" class="form-control">
@@ -239,7 +239,7 @@
           </div>
           <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
             <div class="panel-body">
-              <label>Dengue:</label><input type="checkbox" name="chkDengue" id="chkDengue" class=""/>
+              <label>Dengue:</label><input type="checkbox" name="chkDengue" id="chkDengue" class="form-control"/>
               <label>Data da Amostra de Dengue:</label><input type="date" name="dtAmostraDengue" id="dtAmostraDengue" class="form-control"/>
               <label>Data do Exame de Dengue:</label><input type="date" name="dtExameDengue" id="dtExameDengue" class="form-control"/>
               <label>Material Utilizado para Dengue:</label><select id="matUtilizadoDengue" class="form-control">
@@ -279,7 +279,7 @@
           </div>
           <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
             <div class="panel-body">
-              <label>Vírus do Oeste do Nilo:</label><input type="checkbox" name="chkOesteNilo" id="chkOesteNilo" class=""/>
+              <label>Vírus do Oeste do Nilo:</label><input type="checkbox" name="chkOesteNilo" id="chkOesteNilo" class="form-control"/>
               <label>Data da Amostra do Vírus do Oeste do Nilo:</label><input type="date" name="dtAmostraOesteNilo" id="dtAmostraOesteNilo" class="form-control"/>
               <label>Data do Exame do Vírus do Oeste do Nilo:</label><input type="date" name="dtExameOesteNilo" id="dtExameOesteNilo" class="form-control"/>
               <label>Material Utilizado para Vírus do Oeste do Nilo:</label><select id="matUtilizadoOesteNilo" class="form-control">
@@ -320,7 +320,7 @@
           </div>
           <div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
             <div class="panel-body">
-              <label>Vírus Toxoplasmose:</label><input type="checkbox" name="chkToxoplasmose" id="chkToxoplasmose" class=""/>
+              <label>Vírus Toxoplasmose:</label><input type="checkbox" name="chkToxoplasmose" id="chkToxoplasmose" class="form-control"/>
               <label>Data da Amostra do Toxoplasmose:</label><input type="date" name="dtAmostraToxoplasmose" id="dtAmostraToxoplasmose" class="form-control"/>
               <label>Data do Exame do Toxoplasmose:</label><input type="date" name="dtExameToxoplasmose" id="dtExameToxoplasmose" class="form-control"/>
               <label>Material Utilizado para Toxoplasmose:</label><select id="matUtilizadoToxoplasmose" class="form-control">
@@ -361,7 +361,7 @@
             </div>
             <div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
               <div class="panel-body">
-                <label>Cytomegalovirus:</label><input type="checkbox" name="chkCytomegalovirus" id="chkCytomegalovirus" class=""/>
+                <label>Cytomegalovirus:</label><input type="checkbox" name="chkCytomegalovirus" id="chkCytomegalovirus" class="form-control"/>
                 <label>Data da Amostra de Cytomegalovirus:</label><input type="date" name="dtAmostraCytomegalovirus" id="dtAmostraCytomegalovirus" class="form-control"/>
                 <label>Data do Exame de Cytomegalovirus:</label><input type="date" name="dtExameCytomegalovirus" id="dtExameCytomegalovirus" class="form-control"/>
                 <label>Material Utilizado para Cytomegalovirus:</label><select id="matUtilizadoCytomegalovirus" class="form-control">
@@ -401,7 +401,7 @@
             </div>
             <div id="collapseTen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
               <div class="panel-body">
-                <label>HIV:</label><input type="checkbox" name="chkHIV" id="chkHIV" class=""/>
+                <label>HIV:</label><input type="checkbox" name="chkHIV" id="chkHIV" class="form-control"/>
                 <label>Data da Amostra de HIV:</label><input type="date" name="dtAmostraHIV" id="dtAmostraHIV" class="form-control"/>
                 <label>Data do Exame de HIV:</label><input type="date" name="dtExameHIV" id="dtExameHIV" class="form-control"/>
                 <label>Material Utilizado para HIV:</label><select id="matUtilizadoHIV" class="form-control">
@@ -436,7 +436,7 @@
             <div class="panel-heading" role="tab" id="headingEleven">
               <h4 class="panel-title">
                 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
-                  Outro <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                  Outro <span class="glyphicon glyphicon-ok" id="spanOutro"></span>
                 </a>
               </h4>
             </div>
@@ -480,7 +480,7 @@
 
     <div class="col-sm-9">
       <?php
-        include('menuAsidePaciente.php');
+        include('menuAsidePaciente.html');
       ?>
    </div>
   </div>
