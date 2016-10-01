@@ -7,6 +7,7 @@ angular
 		        	myResource.get({'cep': $scope.cep}).$promise
 					.then(function success(result){
 						$scope.resultCEP = result;
+            angular.element('#numero').trigger('focus');
 					}).catch(function error(msg) {
 						console.error('Error');
 					});
