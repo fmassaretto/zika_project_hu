@@ -5,6 +5,7 @@ body {
 }
 
 input[type="checkbox"]{
+  margin: 20px 20px 20px 60px;
   width: 20px;
   height: 20px;
   align: center;
@@ -27,4 +28,8 @@ input[type="checkbox"]{
 }
 #addSoro{
   padding: 10px;
+}
+
+#spanOutro, #spanHIV{
+  visibility: hidden;
 }
