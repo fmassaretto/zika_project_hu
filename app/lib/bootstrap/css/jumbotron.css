@@ -7,23 +7,28 @@ body {
 footer{
   text-align: center;
 }
+
 @media only screen and (max-width: 767px) {
-.botoes2{ display: none !important; }
-}
-@media only screen and (max-width: 767px) {
-.botoes{
-  position: relative;
-    padding-top: 30px !important;
-    margin-top: 30px;
-    display: inline !important;
+  .botoes{
+    height: 100px;
+    padding: 30px;
+    display: inline-block;e !important;
   }
 
-  #menuAside a{
+  .list-group-item {
+    word-wrap: break-word;
+    width: 300px;
     text-overflow: ellipsis;
   }
-  #menuAside span{
+  .list-group-item span{
     position: sticky;
     text-overflow: ellipsis;
+  }
+
+  .badge{
+    display: inline-block;
+    align-self: auto;
+    padding: 5x;
   }
 
 }
