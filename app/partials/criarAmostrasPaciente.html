@@ -5,7 +5,7 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container" ng-controller="selectPreValuesController">
 
       <!-- Começa a row -->
       <div class="row">
@@ -27,19 +27,10 @@
                   <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                     <div class="panel-body">
                       <label>Em Qual Freezer Encontra a Amostra:</label><select id="amostraFreezerSoro" class="form-control">
-                                                                          <option class=""></option>
-                                                                          <option class="">Freezer 1</option>
-                                                                          <option class="">Freezer 2</option>
-                                                                          <option class="">Feezer 3</option>
+                                                                          <option class="" ng-repeat="freezer in freezers">{{freezer.nome}}</option>
                                                                         </select>
                       <label>Em Qual Prateleira Encontra a Amostra:</label><select id="amostraPrateleiraSoro" class="form-control">
-                                                                          <option class=""></option>
-                                                                          <option class="">Prateleira 1</option>
-                                                                          <option class="">Prateleira 2</option>
-                                                                          <option class="">Prateleira 3</option>
-                                                                          <option class="">Prateleira 4</option>
-                                                                          <option class="">Prateleira 5</option>
-                                                                          <option class="">Prateleira 6</option>
+                                                                          <option class="" ng-repeat="prateleira in prateleiras">{{prateleira.nome}}</option>
                                                                         </select>
                       <div id="primeiraColetaSoro">
                         <label>Data da Primeira Coleta:</label><input type="date" name="dtPrimeiraColetaSoro" id="dtPrimeiraColetaSoro" class="form-control"/>
@@ -68,19 +59,10 @@
                   <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                     <div class="panel-body">
                       <label>Em Qual Freezer Encontra a Amostra:</label><select id="amostraFreezerPlasma" class="form-control">
-                                                                          <option class=""></option>
-                                                                          <option class="">Freezer 1</option>
-                                                                          <option class="">Freezer 2</option>
-                                                                          <option class="">Feezer 3</option>
+                                                                          <option class="" ng-repeat="freezer in freezers">{{freezer.nome}}</option>
                                                                         </select>
                       <label>Em Qual Prateleira Encontra a Amostra:</label><select id="amostraPrateleiraPlasma" class="form-control">
-                                                                          <option class=""></option>
-                                                                          <option class="">Prateleira 1</option>
-                                                                          <option class="">Prateleira 2</option>
-                                                                          <option class="">Prateleira 3</option>
-                                                                          <option class="">Prateleira 4</option>
-                                                                          <option class="">Prateleira 5</option>
-                                                                          <option class="">Prateleira 6</option>
+                                                                          <option class="" ng-repeat="prateleira in prateleiras">{{prateleira.nome}}</option>
                                                                         </select>
                       <div id="primeiraColetaPlasma">
                         <label>Data da Primeira Coleta:</label><input type="date" name="dtPrimeiraColetaPlasma" id="dtPrimeiraColetaPlasma" class="form-control"/>
@@ -109,19 +91,10 @@
                   <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                     <div class="panel-body">
                       <label>Em Qual Freezer Encontra a Amostra:</label><select id="amostraFreezerSaliva" class="form-control">
-                                                                          <option class=""></option>
-                                                                          <option class="">Freezer 1</option>
-                                                                          <option class="">Freezer 2</option>
-                                                                          <option class="">Feezer 3</option>
+                                                                          <option class="" ng-repeat="freezer in freezers">{{freezer.nome}}</option>
                                                                         </select>
                       <label>Em Qual Prateleira Encontra a Amostra:</label><select id="amostraPrateleiraSaliva" class="form-control">
-                                                                          <option class=""></option>
-                                                                          <option class="">Prateleira 1</option>
-                                                                          <option class="">Prateleira 2</option>
-                                                                          <option class="">Prateleira 3</option>
-                                                                          <option class="">Prateleira 4</option>
-                                                                          <option class="">Prateleira 5</option>
-                                                                          <option class="">Prateleira 6</option>
+                                                                          <option class="" ng-repeat="prateleira in prateleiras">{{prateleira.nome}}</option>
                                                                         </select>
                       <div id="primeiraColetaSaliva">
                         <label>Data da Primeira Coleta:</label><input type="date" name="dtPrimeiraColetaSaliva" id="dtPrimeiraColetaSaliva" class="form-control"/>
@@ -150,19 +123,10 @@
                   <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
                     <div class="panel-body">
                       <label>Em Qual Freezer Encontra a Amostra:</label><select id="amostraFreezerUrina" class="form-control">
-                                                                          <option class=""></option>
-                                                                          <option class="">Freezer 1</option>
-                                                                          <option class="">Freezer 2</option>
-                                                                          <option class="">Feezer 3</option>
+                                                                          <option class="" ng-repeat="freezer in freezers">{{freezer.nome}}</option>
                                                                         </select>
                       <label>Em Qual Prateleira Encontra a Amostra:</label><select id="amostraPrateleiraUrina" class="form-control">
-                                                                          <option class=""></option>
-                                                                          <option class="">Prateleira 1</option>
-                                                                          <option class="">Prateleira 2</option>
-                                                                          <option class="">Prateleira 3</option>
-                                                                          <option class="">Prateleira 4</option>
-                                                                          <option class="">Prateleira 5</option>
-                                                                          <option class="">Prateleira 6</option>
+                                                                          <option class="" ng-repeat="prateleira in prateleiras">{{prateleira.nome}}</option>
                                                                         </select>
                       <div id="primeiraColetaUrina">
                         <label>Data da Primeira Coleta:</label><input type="date" name="dtPrimeiraColetaUrina" id="dtPrimeiraColetaUrina" class="form-control"/>
@@ -197,19 +161,10 @@
               <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
                 <div class="panel-body">
                   <label>Em Qual Freezer Encontra a Amostra:</label><select id="amostraFreezerColostro" class="form-control">
-                                                                      <option class=""></option>
-                                                                      <option class="">Freezer 1</option>
-                                                                      <option class="">Freezer 2</option>
-                                                                      <option class="">Feezer 3</option>
+                                                                      <option class="" ng-repeat="freezer in freezers">{{freezer.nome}}</option>
                                                                     </select>
                   <label>Em Qual Prateleira Encontra a Amostra:</label><select id="amostraPrateleiraColostro" class="form-control">
-                                                                      <option class=""></option>
-                                                                      <option class="">Prateleira 1</option>
-                                                                      <option class="">Prateleira 2</option>
-                                                                      <option class="">Prateleira 3</option>
-                                                                      <option class="">Prateleira 4</option>
-                                                                      <option class="">Prateleira 5</option>
-                                                                      <option class="">Prateleira 6</option>
+                                                                      <option class="" ng-repeat="prateleira in prateleiras">{{prateleira.nome}}</option>
                                                                     </select>
                   <div id="primeiraColetaColostro">
                     <label>Data da Primeira Coleta:</label><input type="date" name="dtPrimeiraColetaColostro" id="dtPrimeiraColetaColostro" class="form-control"/>
@@ -238,19 +193,10 @@
               <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
                 <div class="panel-body">
                   <label>Em Qual Freezer Encontra a Amostra:</label><select id="amostraFreezerLiquor" class="form-control">
-                                                                      <option class=""></option>
-                                                                      <option class="">Freezer 1</option>
-                                                                      <option class="">Freezer 2</option>
-                                                                      <option class="">Feezer 3</option>
+                                                                      <option class="" ng-repeat="freezer in freezers">{{freezer.nome}}</option>
                                                                     </select>
                   <label>Em Qual Prateleira Encontra a Amostra:</label><select id="amostraPrateleiraLiquor" class="form-control">
-                                                                      <option class=""></option>
-                                                                      <option class="">Prateleira 1</option>
-                                                                      <option class="">Prateleira 2</option>
-                                                                      <option class="">Prateleira 3</option>
-                                                                      <option class="">Prateleira 4</option>
-                                                                      <option class="">Prateleira 5</option>
-                                                                      <option class="">Prateleira 6</option>
+                                                                      <option class="" ng-repeat="prateleira in prateleiras">{{prateleira.nome}}</option>
                                                                     </select>
                   <div id="primeiraColetaLiquor">
                     <label>Data da Primeira Coleta:</label><input type="date" name="dtPrimeiraColetaLiquor" id="dtPrimeiraColetaLiquor" class="form-control"/>
@@ -279,19 +225,10 @@
               <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
                 <div class="panel-body">
                   <label>Em Qual Freezer Encontra a Amostra:</label><select id="amostraFreezerPlacenta" class="form-control">
-                                                                      <option class=""></option>
-                                                                      <option class="">Freezer 1</option>
-                                                                      <option class="">Freezer 2</option>
-                                                                      <option class="">Feezer 3</option>
+                                                                      <option class="" ng-repeat="freezer in freezers">{{freezer.nome}}</option>
                                                                     </select>
                   <label>Em Qual Prateleira Encontra a Amostra:</label><select id="amostraPrateleiraPlacenta" class="form-control">
-                                                                      <option class=""></option>
-                                                                      <option class="">Prateleira 1</option>
-                                                                      <option class="">Prateleira 2</option>
-                                                                      <option class="">Prateleira 3</option>
-                                                                      <option class="">Prateleira 4</option>
-                                                                      <option class="">Prateleira 5</option>
-                                                                      <option class="">Prateleira 6</option>
+                                                                      <option class="" ng-repeat="prateleira in prateleiras">{{prateleira.nome}}</option>
                                                                     </select>
                   <div id="primeiraColetaPlacenta">
                     <label>Data da Primeira Coleta:</label><input type="date" name="dtPrimeiraColetaPlacenta" id="dtPrimeiraColetaPlacenta" class="form-control"/>
@@ -319,20 +256,11 @@
               </div>
               <div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
                 <div class="panel-body">
-                  <label>Em Qual Freezer Encontra a Amostra:</label><select id="amostraFreezerLiqAminiotico" class="form-control">
-                                                                      <option class=""></option>
-                                                                      <option class="">Freezer 1</option>
-                                                                      <option class="">Freezer 2</option>
-                                                                      <option class="">Feezer 3</option>
+                  <label>Em Qual Freezer Encontra a Amostra:</label><select id="amostraFreezerLiqAminiotico" class="form-control">                                                                      
+                                                                      <option class="" ng-repeat="freezer in freezers">{{freezer.nome}}</option>                                                                                                                                            
                                                                     </select>
-                  <label>Em Qual Prateleira Encontra a Amostra:</label><select id="amostraPrateleiraLiqAminiotico" class="form-control">
-                                                                      <option class=""></option>
-                                                                      <option class="">Prateleira 1</option>
-                                                                      <option class="">Prateleira 2</option>
-                                                                      <option class="">Prateleira 3</option>
-                                                                      <option class="">Prateleira 4</option>
-                                                                      <option class="">Prateleira 5</option>
-                                                                      <option class="">Prateleira 6</option>
+                  <label>Em Qual Prateleira Encontra a Amostra:</label><select id="amostraPrateleiraLiqAminiotico" class="form-control">                                                                      
+                                                                      <option class="" ng-repeat="prateleira in prateleiras">{{prateleira.nome}}</option>                                                                                                                                                                                                                                                                                                                                                              
                                                                     </select>
                   <div id="primeiraColetaLiqAminiotico">
                     <label>Data da Primeira Coleta:</label><input type="date" name="dtPrimeiraColetaLiqAminiotico" id="dtPrimeiraColetaLiqAminiotico" class="form-control"/>
