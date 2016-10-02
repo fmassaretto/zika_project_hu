@@ -1,0 +1,36 @@
+    <div class="container" id="w">
+      <div class="col-md-24" id="painelInfoPaciente">
+        <h3>{nome da paciente}</h3> <h4>{Numero do Caso}</h4>
+      </div>
+    </div>
+
+    <div class="container" ng-controller="selectPreValuesController">
+
+      <!-- Começa a row -->
+      <div class="row">
+
+        <!-- Aqui começa a coluna da esquerda -->
+        <div class="col-sm-7 nav navbar-left">
+          <label>Nome Recém-Nascido:</label><input type="text" name="nomeRN" id="nomeRN" class="form-control"/>
+          <label>Data de Nascimento:</label><input type="date" name="dtNascimentoRN" id="dtNascimentoRN" class="form-control"/>
+        </div><!-- fechou coluna da esquerda-->
+
+        <!-- Aqui começa a coluna da direita -->
+        <div class="col-sm-7 col-offset-1 nav navbar-left">
+          <label>Data do Atendimento:</label><input type="date" name="dtAtendimentoRN" id="dtAtendimentoRN" class="form-control"/>
+          <label>Recém-Nascido tem Microcefalia:</label><select name="sltMicrocefaliaRN" id="sltMicrocefaliaRN" class="form-control">
+                                                              <option class="" value="'{{ sn.value }}'" ng-repeat="sn in simnao">{{ sn.nome }}</option>
+                                                        </select>
+
+          <div class="botoes">
+            <input type="submit" name="editar" value="Editar" class="btn btn-success btn-sm"/>
+            <input type="button" name="cancelar" value="Cancelar" class="btn btn-default btn-sm"/>
+          </div>
+          </form>
+
+        </div><!-- fechou coluna direita-->
+
+          <div class="col-sm-9" id="menuAside" ng-include="'partials/menuAsideRN.html'"></div>
+
+     </div><!-- fechou row -->
+    </div> <!-- /container -->
