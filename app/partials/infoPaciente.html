@@ -56,10 +56,10 @@
                                                   <option ng-repeat="sn in simnao">{{ sn.nome }}</option>
                                                 </select>
               <label>Assinou o Termo de Consentimento?</label><select id="assTermConsent" class="form-control">
-                                                                <option ng-repeat="sn in simnao">{{ sn.nome }}</option>
+                                                                <option value="'{{ sn.value }}'" ng-repeat="sn in simnao">{{ sn.nome }}</option>
                                                               </select>
               <label>Melhor Horário para Contato:</label><select id="melhorHorarioContato" class="form-control" multiple>
-                                                          <option ng-repeat="melhorHorario in melhoresHorarios">{{ melhorHorario.nome }}</option>
+                                                          <option value="'{{ melhorHorario.value }}'" ng-repeat="melhorHorario in melhoresHorarios">{{ melhorHorario.nome }}</option>
                                                         </select>
                                                         <hr>
               <label>Telefone (Celular/Principal):</label><input type="text" name="telCelPri" id="telCelPri" class="form-control" />
