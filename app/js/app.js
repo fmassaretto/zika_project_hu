@@ -39,6 +39,16 @@ zikaApp.config(function($routeProvider) {
             controller  : 'buscarPctController',
             title       : 'Pesquisar Paciente'
         })
+        .when('/cadastrarRN', {
+            templateUrl : 'partials/cadastrarRN.html',
+            controller  : 'cadastrarRNController',
+            title       : 'Cadastrar Recém-Nascido'
+        })
+        .when('/dadosRN', {
+            templateUrl : 'partials/dadosRN.html',
+            controller  : 'dadosRNController',
+            title       : 'Dados do Recém-Nascido'
+        })
         .otherwise({
           template: '<h1>Not Found</h1>'
         });
@@ -81,4 +91,14 @@ zikaApp.controller('cadastrarPctController', function($scope) {
 zikaApp.controller('buscarPctController', function($scope) {
     $scope.message = 'Pagina para pesquisar paciente.';
     $scope.titulo = 'Pesquisar Paciente';
+});
+
+zikaApp.controller('cadastrarRNController', function($scope) {
+    $scope.message = 'Pagina para cadastrar Recém-Nascido.';
+    $scope.titulo = 'Cadastrar Recém-Nascido';
+});
+
+zikaApp.controller('dadosRNController', function($scope) {
+    $scope.message = 'Pagina dos Dados Recém-Nascido.';
+    $scope.titulo = 'Dados do Recém-Nascido';
 });
