@@ -15,18 +15,38 @@ angular
 
     $scope.prateleiras = [
       {"nome": " ", "value": " "},
-      {"nome": "Prateleira 1", "value": "Prateleira 1"},
-      {"nome": "Prateleira 2", "value": "Prateleira 2"},
-      {"nome": "Prateleira 3", "value": "Prateleira 3"},
-      {"nome": "Prateleira 4", "value": "Prateleira 4"},
-      {"nome": "Prateleira 5", "value": "Prateleira 5"},
-      {"nome": "Prateleira 6", "value": "Prateleira 6"}
+      {"nome": "Prateleira 1", "value": "prateleira 1"},
+      {"nome": "Prateleira 2", "value": "prateleira 2"},
+      {"nome": "Prateleira 3", "value": "prateleira 3"},
+      {"nome": "Prateleira 4", "value": "prateleira 4"},
+      {"nome": "Prateleira 5", "value": "prateleira 5"},
+      {"nome": "Prateleira 6", "value": "prateleira 6"}
     ];
 
     $scope.freezers = [
       {"nome": " ", "value": " "},
-      {"nome": "Freezer 1", "value": "Freezer 1"},
-      {"nome": "Freezer 2", "value": "Freezer 2"},
-      {"nome": "Freezer 3", "value": "Freezer 3"}
+      {"nome": "Freezer 1", "value": "freezer 1"},
+      {"nome": "Freezer 2", "value": "freezer 2"},
+      {"nome": "Freezer 3", "value": "freezer 3"}
+    ];
+
+    $scope.tiposParto = [
+      {"nome": " ", "value": " "},
+      {"nome": "Vaginal", "value": "vaginal"},
+      {"nome": "Cesárea", "value": "cesarea"},
+      {"nome": "Fórceps", "value": "forceps"},
+      {"nome": "Não Informado", "value": "naoInformado"}
+    ];
+
+    $scope.normalAnormal = [
+      {"nome": " ", "value": " "},
+      {"nome": "Normal", "value": "normal"},
+      {"nome": "Anormal", "value": "anormal"}
+    ];
+
+    $scope.positivoNegativo = [
+      {"nome": " ", "value": " "},
+      {"nome": "Positivo", "value": "Positivo"},
+      {"nome": "Negativo", "value": "Negativo"}
     ];
   });
