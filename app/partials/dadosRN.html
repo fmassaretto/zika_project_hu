@@ -1,73 +1,73 @@
-    <div class="container" id="w">
-      <div class="col-md-24" id="painelInfoPaciente">
-        <h3>{nome do RN}</h3> <h4>{Numero do Caso}</h4>
+<div class="container" id="w">
+  <div class="col-md-24" id="painelInfoPaciente">
+    <h3>{nome do RN}</h3> <h4>{Numero do Caso}</h4>
+  </div>
+</div>
+
+<div class="container" ng-controller="selectPreValuesController">
+
+  <!-- Começa a row -->
+  <div class="row">
+
+    <!-- Aqui começa a coluna da esquerda -->
+    <div class="col-sm-7 nav navbar-left">
+      <label>Tipo do Parto:</label><select name="sltTipoPartoRN" id="sltTipoPartoRN" class="form-control">
+                                      <option class="" value="'{{ tipoParto.nome }}'" ng-repeat="tipoParto in tiposParto">{{ tipoParto.nome }}</option>
+                                    </select>
+      <label>Estatura (cm):</label><input type="number" min="1" name="compNascerRN" id="compNascerRN" class="form-control"/>
+      <label>Apgar 5:</label><input type="number" min="1" name="apgarRN" id="apgarRN" class="form-control"/>
+      <label>EOA (Emissões):</label><select name="sltEoaRN" ng-model="sltEoaRN" id="sltEoaRN" class="form-control">
+                                      <option class="" value="{{ norAnor.value }}" ng-repeat="norAnor in normalAnormal">{{ norAnor.nome }}</option>
+                                    </select>
+      <label>Intecorrências Perinatais:</label><select name="sltIntercoPrinataisRN" id="sltIntercoPrinataisRN" class="form-control">
+                                                            <option class="" value="{{ sn.value }}" ng-repeat="sn in simnao">{{ sn.nome }}</option>
+                                                          </select>
+      <label>Quais Intecorrências Perinatis:</label><select name="sltQuaisInterPrinataisRN" id="sltQuaisInterPrinataisRN" class="form-control" multiple>
+                                                        <option class="" value="">Ainda a definir</option>
+                                                      </select>
+      <label>Triagem Neonatal Sangue (TNS):</label><select name="sltTNSRN" id="sltTNSRN" class="form-control">
+                                                      <option class="" value="{{ sn.value }}" ng-repeat="sn in simnao">{{ sn.nome }}</option>
+                                                    </select>
+      <label>Resltado TNS:</label><select name="sltResultadoTNSRN" id="sltResultadoTNSRN" class="form-control">
+                                    <option class="" value="{{ posNeg.value }}" ng-repeat="posNeg in positivoNegativo">{{ posNeg.nome }}</option>
+                                  </select>
+      <label>Triagem Auditiva Neonatal (TAN):</label><select name="sltTANRN" id="sltTANRN" class="form-control">
+                                                        <option class="" value="{{ sn.value }}" ng-repeat="sn in simnao">{{ sn.nome }}</option>
+                                                      </select>
+      <label>Resltado TAN:</label><select name="sltResultadoTANRN" id="sltResultadoTANRN" class="form-control">
+                                    <option class="" value="{{ posNeg.value }}" ng-repeat="posNeg in positivoNegativo">{{ posNeg.nome }}</option>
+                                  </select>
+    </div><!-- fechou coluna da esquerda-->
+
+    <!-- Aqui começa a coluna da direita -->
+    <div class="col-sm-7 col-offset-1 nav navbar-left">
+      <label>Peso ao Nascer (Kg):</label><input type="number" min="0" name="pesoNascerRN" id="pesoNascerRN" class="form-control"/>
+      <label>Perímetro Cefálico (cm):</label><input type="number" min="0" name="pcRN" id="pcRN" class="form-control"/>
+      <label>Capurro:</label><input type="text" name="capurroRN" id="capurroRN" value="{{ sltEoaRN }}" class="form-control"/>
+
+      <label>Intecorrências no Trabalho de Parto:</label><select name="sltIntercorrenciaRN" id="sltIntercorrenciaRN" class="form-control">
+                                                            <option class="" value="{{ sn.value }}" ng-repeat="sn in simnao">{{ sn.nome }}</option>
+                                                          </select>
+      <label>Quais Intecorrências no TP:</label><select name="sltQuaisIntercorrenciaRN" id="sltQuaisIntercorrenciaRN" class="form-control" multiple>
+                                                        <option class="" value="">Ainda a definir</option>
+                                                      </select>
+
+      <label>Triagem Ocular Neonatal (TON):</label><select name="sltTONRN" id="sltTONRN" class="form-control">
+                                                        <option class="" value="{{ sn.value }}" ng-repeat="sn in simnao">{{ sn.nome }}</option>
+                                                      </select>
+      <label>Resltado TON:</label><select name="sltResultadoTONRN" id="sltResultadoTONRN" class="form-control">
+                                    <option class="" value="{{ posNeg.value }}" ng-repeat="posNeg in positivoNegativo">{{ posNeg.nome }}</option>
+                                  </select>
+
+      <div class="botoes">
+        <input type="submit" name="Salvar" value="Salvar" class="btn btn-success btn-sm"/>
+        <input type="button" name="cancelar" value="Cancelar" class="btn btn-default btn-sm"/>
       </div>
-    </div>
+      </form>
 
-    <div class="container" ng-controller="selectPreValuesController">
+    </div><!-- fechou coluna direita-->
 
-      <!-- Começa a row -->
-      <div class="row">
+    <div class="col-sm-9" id="menuAside" ng-include="'partials/menuAsideRN.html'"></div>
 
-        <!-- Aqui começa a coluna da esquerda -->
-        <div class="col-sm-7 nav navbar-left">
-          <label>Tipo do Parto:</label><select name="sltTipoPartoRN" id="sltTipoPartoRN" class="form-control">
-                                          <option class="" value="'{{ tipoParto.nome }}'" ng-repeat="tipoParto in tiposParto">{{ tipoParto.nome }}</option>
-                                        </select>
-          <label>Estatura (cm):</label><input type="number" min="1" name="compNascerRN" id="compNascerRN" class="form-control"/>
-          <label>Apgar 5:</label><input type="number" min="1" name="apgarRN" id="apgarRN" class="form-control"/>
-          <label>EOA (Emissões):</label><select name="sltEoaRN" ng-model="sltEoaRN" id="sltEoaRN" class="form-control">
-                                          <option class="" value="{{ norAnor.value }}" ng-repeat="norAnor in normalAnormal">{{ norAnor.nome }}</option>
-                                        </select>
-          <label>Intecorrências Perinatais:</label><select name="sltIntercoPrinataisRN" id="sltIntercoPrinataisRN" class="form-control">
-                                                                <option class="" value="{{ sn.value }}" ng-repeat="sn in simnao">{{ sn.nome }}</option>
-                                                              </select>
-          <label>Quais Intecorrências Perinatis:</label><select name="sltQuaisInterPrinataisRN" id="sltQuaisInterPrinataisRN" class="form-control" multiple>
-                                                            <option class="" value="">Ainda a definir</option>
-                                                          </select>
-          <label>Triagem Neonatal Sangue (TNS):</label><select name="sltTNSRN" id="sltTNSRN" class="form-control">
-                                                          <option class="" value="{{ sn.value }}" ng-repeat="sn in simnao">{{ sn.nome }}</option>
-                                                        </select>
-          <label>Resltado TNS:</label><select name="sltResultadoTNSRN" id="sltResultadoTNSRN" class="form-control">
-                                        <option class="" value="{{ posNeg.value }}" ng-repeat="posNeg in positivoNegativo">{{ posNeg.nome }}</option>
-                                      </select>
-          <label>Triagem Auditiva Neonatal (TAN):</label><select name="sltTANRN" id="sltTANRN" class="form-control">
-                                                            <option class="" value="{{ sn.value }}" ng-repeat="sn in simnao">{{ sn.nome }}</option>
-                                                          </select>
-          <label>Resltado TAN:</label><select name="sltResultadoTANRN" id="sltResultadoTANRN" class="form-control">
-                                        <option class="" value="{{ posNeg.value }}" ng-repeat="posNeg in positivoNegativo">{{ posNeg.nome }}</option>
-                                      </select>
-        </div><!-- fechou coluna da esquerda-->
-
-        <!-- Aqui começa a coluna da direita -->
-        <div class="col-sm-7 col-offset-1 nav navbar-left">
-          <label>Peso ao Nascer (Kg):</label><input type="number" min="0" name="pesoNascerRN" id="pesoNascerRN" class="form-control"/>
-          <label>Perímetro Cefálico (cm):</label><input type="number" min="0" name="pcRN" id="pcRN" class="form-control"/>
-          <label>Capurro:</label><input type="text" name="capurroRN" id="capurroRN" value="{{ sltEoaRN }}" class="form-control"/>
-
-          <label>Intecorrências no Trabalho de Parto:</label><select name="sltIntercorrenciaRN" id="sltIntercorrenciaRN" class="form-control">
-                                                                <option class="" value="{{ sn.value }}" ng-repeat="sn in simnao">{{ sn.nome }}</option>
-                                                              </select>
-          <label>Quais Intecorrências no TP:</label><select name="sltQuaisIntercorrenciaRN" id="sltQuaisIntercorrenciaRN" class="form-control" multiple>
-                                                            <option class="" value="">Ainda a definir</option>
-                                                          </select>
-
-          <label>Triagem Ocular Neonatal (TON):</label><select name="sltTONRN" id="sltTONRN" class="form-control">
-                                                            <option class="" value="{{ sn.value }}" ng-repeat="sn in simnao">{{ sn.nome }}</option>
-                                                          </select>
-          <label>Resltado TON:</label><select name="sltResultadoTONRN" id="sltResultadoTONRN" class="form-control">
-                                        <option class="" value="{{ posNeg.value }}" ng-repeat="posNeg in positivoNegativo">{{ posNeg.nome }}</option>
-                                      </select>
-
-          <div class="botoes">
-            <input type="submit" name="Salvar" value="Salvar" class="btn btn-success btn-sm"/>
-            <input type="button" name="cancelar" value="Cancelar" class="btn btn-default btn-sm"/>
-          </div>
-          </form>
-
-        </div><!-- fechou coluna direita-->
-
-          <div class="col-sm-9" id="menuAside" ng-include="'partials/menuAsideRN.html'"></div>
-
-     </div><!-- fechou row -->
-    </div> <!-- /container -->
+ </div><!-- fechou row -->
+</div> <!-- /container -->
