@@ -1,0 +1,72 @@
+<div class="container" ng-controller="selectPreValuesController">
+
+  <!-- Começa a row -->
+  <div class="row">
+
+    <!-- Aqui começa a coluna da esquerda -->
+    <div class="col-sm-3"></div><!-- coluna da esquerda-->
+
+      <!-- Aqui começa a coluna do meio -->
+      <div class="col-sm-17" ng-controllers="incluirUsuarioCtrl">
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label class="col-sm-5 control-label">Nome Completo:</label>
+            <div class="col-sm-10">
+              <input type="text" name="nomeCompleto" ng-model="nomeCompleto" id="nomeCompleto" class="form-control"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-5 control-label">E-mail:</label>
+            <div class="col-sm-10">
+              <input type="email" name="email" ng-model="email" id="email" class="form-control"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-5 control-label">Telefone(Opcional):</label>
+            <div class="col-sm-10">
+              <input type="tel" name="tel" ng-model="tel" id="tel" class="form-control"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-5 control-label">Função:</label>
+            <div class="col-sm-10">
+              <select name="sltMicrocefaliaRN" id="sltMicrocefaliaRN" class="form-control">
+                <option class="" value="'{{ sn.value }}'" ng-repeat="sn in simnao">{{ sn.nome }}</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-5 control-label">Usuário:</label>
+            <div class="col-sm-10">
+              <input type="text" name="usuario" id="usuario" class="form-control"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-5 control-label">Senha:</label>
+            <div class="col-sm-10">
+              <input type="password" name="senha" id="senha" class="form-control"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-5 control-label">Confirmação de Senha:</label>
+            <div class="col-sm-10">
+              <input type="password" name="confSenha" id="confSenha" class="form-control"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-5 col-sm-10">
+              <input type="submit" name="salvar" value="Salvar" ng-click="incluirUsuario()" class="btn btn-success btn-sm"/>
+              <input type="button" name="cancelar" value="Cancelar" class="btn btn-default btn-sm"/>
+              <h4>{{msg}}</h4>
+            </div>
+          </div>
+        </form>
+
+
+
+    </div><!-- fechou coluna meio-->
+
+      <div class="col-sm-3"></div> <!-- Coluna direita -->
+
+ </div><!-- fechou row -->
+</div> <!-- /container -->
