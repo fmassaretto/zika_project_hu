@@ -50,7 +50,7 @@ class ConexaoBD{
           $sql .= ' LIMIT '.$conditions['limit'];
       }
 
-      $query = $this->db->prepare($sql);
+      $query = $this->conexao->prepare($sql);
       $query->execute();
 
       if(array_key_exists("return_type",$conditions) && $conditions['return_type'] != 'all'){
@@ -92,14 +92,14 @@ class ConexaoBD{
           $columnString = implode(',', array_keys($data));
           $valueString = ":".implode(',:', array_keys($data));
           $sql = "INSERT INTO ".$table." (".$columnString.") VALUES (".$valueString.")";
-          $query = $this->db->prepare($sql);
+          $query = $this->conexao->prepare($sql);
           foreach($data as $key=>$val){
               $val = htmlspecialchars(strip_tags($val));
               $query->bindValue(':'.$key, $val);
           }
           $insert = $query->execute();
           if($insert){
-              $data['id'] = $this->db->lastInsertId();
+              $data['id'] = $this->conexao->lastInsertId();
               return $data;
           }else{
               return false;
@@ -139,7 +139,7 @@ class ConexaoBD{
               }
           }
           $sql = "UPDATE ".$table." SET ".$colvalSet.$whereSql;
-          $query = $this->db->prepare($sql);
+          $query = $this->conexao->prepare($sql);
           $update = $query->execute();
           return $update?$query->rowCount():false;
       }else{
@@ -164,7 +164,7 @@ class ConexaoBD{
           }
       }
       $sql = "DELETE FROM ".$table.$whereSql;
-      $delete = $this->db->exec($sql);
+      $delete = $this->conexao->exec($sql);
       return $delete?$delete:false;
   }
 }
